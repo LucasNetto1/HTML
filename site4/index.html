@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        document.write("<h1>Classificação de gênero e idade</h1>")
+
+
+        $idade = prompt("Qual é a sua idade?")//váriavel que armazena a idade
+        $nome = prompt("Qual o seu nome?")//váriavel que armazena o nome
+        $sexo = prompt("Qual o seu sexo? [M] masculino [F] feminino ")//váriavel que armazena o sexo
+
+
+        if(($sexo == "M") || ($sexo == "m") || ($sexo == "f") || ($sexo == "F"))
+        if ($idade < 18) {//decide a faixa etária dos sexo masculino e feminino
+            if (($sexo == "M") || ($sexo == "m")) {//caso seja menor de idade e masculino será menino
+                alert("Menino")
+
+                document.write("<table border='6' width='800'>")//categoria da tabela
+                document.write("<tr bgcolor='#d9b3ff'>")
+                document.write("<td align='center'><b>Nome</b></td>")
+                document.write("<td align='center'><b>Idade</b></td>")
+                document.write("<td align='center'><b>Sexo</b></td>")
+                document.write("<td align='center'><b>Foto</b></td>")
+                
+
+
+
+                document.write("<tr>")//faz a tabela de acordo com as informações do usuário
+                document.write("<td align='center'>" + $nome + "</td>")
+                document.write("<td align='center'>" + $idade + "</td>")
+                document.write("<td align='center'>Masculino</td>")
+                document.write("<td align='center'><img src='img/menino/menino.png' widht='200' height='200'></td>")
+
+            }
+            if (($sexo == "f") || ($sexo == "F")) {//caso seja menor de idade e feminino será menina
+                alert("menina")
+
+                document.write("<table border='6' width='800'>")//categoria da tabela
+                document.write("<tr bgcolor='#d9b3ff'>")
+                document.write("<td align='center'><b>Nome</b></td>")
+                document.write("<td align='center'><b>Idade</b></td>")
+                document.write("<td align='center'><b>Sexo</b></td>")
+                document.write("<td align='center'><b>Foto</b></td>")
+
+
+
+                document.write("<tr>")//faz a tabela de acordo com as informações do usuário
+                document.write("<td align='center'>" + $nome + "</td>")
+                document.write("<td align='center'>" + $idade + "</td>")
+                document.write("<td align='center'>Feiminino</td>")
+                document.write("<td align='center'><img src='img/menina/menina.png' widht='200' height='200'></td>")
+
+            }
+        }
+
+        else {
+            if (($sexo == "f") || ($sexo == "F")) {//caso seja maior de idade e feminino será mulher
+
+                alert("Mulher")
+
+                document.write("<table border='6' width='800'>")//categoria da tabela
+                document.write("<tr bgcolor='#d9b3ff'>")
+                document.write("<td align='center'><b>Nome</b></td>")
+                document.write("<td align='center'><b>Idade</b></td>")
+                document.write("<td align='center'><b>Sexo</b></td>")
+                document.write("<td align='center'><b>Foto</b></td>")
+
+
+
+                document.write("<tr>")//faz a tabela de acordo com as informações do usuário
+                document.write("<td align='center'>" + $nome + "</td>")
+                document.write("<td align='center'>" + $idade + "</td>")
+                document.write("<td align='center'>Feminino</td>")
+                document.write("<td align='center'><img src='img/mulher/mulher.png' widht='200' height='200'></td>")
+
+            }
+            if (($sexo == "M") || ($sexo == "m")) {//caso seja maior de idade e masculino será homem
+                alert("homem")
+
+                document.write("<table border='6' width='800'>")//categoria da tabela
+                document.write("<tr bgcolor='#d9b3ff'>")
+                document.write("<td align='center'><b>Nome</b></td>")
+                document.write("<td align='center'><b>Idade</b></td>")
+                document.write("<td align='center'><b>Sexo</b></td>")
+                document.write("<td align='center'><b>Foto</b></td>")
+
+
+
+                document.write("<tr>")//faz a tabela de acordo com as informações do usuário
+                document.write("<td align='center'>" + $nome + "</td>")
+                document.write("<td align='center'>" + $idade + "</td>" )
+                document.write("<td align='center'>Masculino</td>")
+                document.write("<td align='center'><img src='img/homem/homem.png' widht='200' height='200'></td>")
+
+            }
+        }
+        else{
+            alert("ERRO!!! Digite F para feminino ou M para masculino")
+        }
+
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
