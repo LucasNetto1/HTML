@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        $altura = prompt("Qual a sua altura? Coloque em centímetros")
+        $peso = prompt("Qual o seu peso? Coloque em quilograma")
+
+        $calculo = $altura / 100//divide a altura para transformar em metros, pois e usa essa medida para fazer o cálculo
+        $imc = $peso / ($calculo * $calculo)//calcula o imc do usuário
+
+        if ($imc < 18.5) {//classifica de acordo com o imc o status do usuário
+            alert("peso baixo")
+            document.write("Seu imc é " + $imc)
+            document.write("<br><br>")
+            document.write("<img src='img/baixo peso/ledverde.png' widht='10%'><img src='img/baixo peso/pesobaixo.png' widht='20%'>")
+            document.write("<br><br>")
+            document.write("<br><br>")
+            document.write("Caso desejar reiniciar, aperte o botão")//botão para reiniciar a página e colocar outras medidas
+            document.write("<a href='index.html'>REINICIAR A PÁGINA</a>")
+        } else {
+            if ($imc < 25) {//classifica de acordo com o imc o status do usuário
+                alert("Peso normal")
+                document.write("Seu imc é " + $imc)
+                document.write("<br><br>")
+                document.write("<img src='img/peso normal/ledamarelo.png' widht='40%'><img src='img/peso normal/pesonormal.png' widht='40%'>")
+                document.write("<br><br>")
+                document.write("<br><br>")
+                document.write("Caso desejar reiniciar, aperte o botão")//botão para reiniciar a página e colocar outras medidas
+                document.write("<a href='index.html'>REINICIAR A PÁGINA</a>")
+            } else {
+
+                if ($imc < 30) {//classifica de acordo com o imc o status do usuário
+                    alert("Sobrepeso")
+                    document.write("Seu imc é " + $imc)
+                    document.write("<br><br>")
+                    document.write("<img src='img/sobrepeso/ledlaranja.png' widht='40%'><img src='img/sobrepeso/sobrepeso.png' widht='40%'>")
+                    document.write("<br><br>")
+                    document.write("<br><br>")
+                    document.write("Caso desejar reiniciar, aperte o botão")//botão para reiniciar a página e colocar outras medidas
+                    document.write("<a href='index.html'>REINICIAR A PÁGINA</a>")
+                } else {
+                    if ($imc > 30) {//classifica de acordo com o imc o status do usuário
+                        alert("Obesidade")
+                        document.write("Seu imc é " + $imc)
+                        document.write("<br><br>")
+                        document.write("<img src='img/obesidade/ledvermelho.png' widht='50%' ><img src='img/obesidade/obesidade.png' widht='50%' >")
+                        document.write("<br><br>")
+                        document.write("<br><br>")
+                        document.write("Caso desejar reiniciar, aperte o botão")//botão para reiniciar a página e colocar outras medidas
+                        document.write("<a href='index.html'>REINICIAR A PÁGINA</a>")
+                    }
+
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+
+</html>
