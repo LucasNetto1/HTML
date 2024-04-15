@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        $salario= prompt("Qual o seu salário?")
+
+        //classificação
+        if($salario < 1100.01){
+            $porcentagem = "7.5%"
+            $desconto = 0.075
+        } else if($salario < 2203.49){
+            $porcentagem = "9%"
+            $desconto = 0.09
+        }else if($salario < 3305.23){
+            $porcentagem = "12%"
+            $desconto = 0.12
+        }else{
+            $porcentagem = "14%"
+            $desconto = 0.14
+        }
+
+
+
+        //calculo
+        $valordescontado = $salario * $desconto
+        $salario_novo = $salario - $valordescontado 
+
+        //tabela
+
+        document.write("<center>")
+        document.write("<font size ='7'>")
+        document.write("TABELA SALARIAL")
+        document.write("</font>")
+        document.write("<table border='7' bgcolor='#00802b'>")
+        document.write("<tr bgcolor='#00cc44'>")
+        document.write("<td><font size='5'><center><b>VALOR RECEBIDO</b></center></font></td>")
+        document.write("<td><font size='5'><center><b>PORCENTAGEM DESCONTADA</b></center></font></td>")
+        document.write("<td><font size='5'><center><b>DESCONTO DO SALÁRIO</b></center></font></td>")
+        document.write("<td><font size='5'><center><b>SALÁRIO A QUE RECEBERÁ</b></center></font></td>")
+        document.write("</tr>")
+        document.write("<tr bgcolor='#4dff88'>")
+        document.write("<td><center>" + $salario + "</center></td>")
+        document.write("<td><center>" + $porcentagem + "</center></td>")
+        document.write("<td><center>" + $valordescontado + "</center></td>")
+        document.write("<td><center>" + $salario_novo + "</center></td>")
+        document.write("</tr>")
+        document.write("</table>")
+        document.write("</center>")
+        
+
+    </script>
+</head>
+<body bgcolor="#b3ffcc">
+    
+</body>
+</html>
