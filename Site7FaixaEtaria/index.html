@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        $idade = prompt("Digite sua idade:")
+
+        if ($idade < 12) {
+            $resultado = "Criança"
+            $imagem =("<img src='img/criança.png' width='40%'>")
+        } else {
+            if ($idade < 21) {
+                $resultado = "Jovem"
+                $imagem =("<img src='img/jovem.png' width='40%'>")
+            } else {
+                if ($idade < 60) {
+                    $resultado = "Adulto"
+                    $imagem =("<img src='img/adulto.png' width='40%'>")
+                } else {
+                    $resultado = "Idoso"
+                    $imagem =("<img src='img/idoso.png' width='40%'>")
+
+                }
+
+            }
+        }
+
+        document.write("<center>")
+        document.write("<font size ='7'>")
+        document.write("TABELA DE FAIXA ETÁRIA")
+        document.write("</font>")
+        document.write("<table border='7' bgcolor='#0073e6'>")
+        document.write("<tr bgcolor='#4da6ff'>")
+        document.write("<td><font size='5'><center><b>IDADE</b></center></font></td>")
+        document.write("<td><font size='5'><center><b>STATUS</b></center></font></td>")
+        document.write("<td><font size='5'><center><b>FOTO</b></center></font></td>")
+        document.write("</tr>")
+        document.write("<tr bgcolor='#80bfff'>")
+        document.write("<td><center>" + $idade + "</center></td>")
+        document.write("<td><center>" + $resultado + "</center></td>")
+        document.write("<td><center>" + $imagem + "</center></td>")
+        document.write("</tr>")
+        document.write("</table>")
+        document.write("</center>")
+
+
+
+    </script>
+</head>
+
+<body bgcolor="#e6f2ff">
+
+</body>
+
+</html>
