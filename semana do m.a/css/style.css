@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+.center{
+   
+   max-width: 1280px;
+}
+.menu{
+    padding-left: 50px;
+}
+header{
+    padding: 20px 0;
+}
+
+.menu a{
+    color:#006600;
+    text-decoration: none;
+    font-weight: bold;
+}
